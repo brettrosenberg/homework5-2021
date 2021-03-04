@@ -131,7 +131,7 @@ header{
 .about-image, .method-image, .client-image, .contact-image{
   /*Your Code Here*/
   overflow: hidden;
-  max-height: 650 px;
+  max-height: 650px;
   grid-column: 1/-1;
 }
 
@@ -210,3 +210,19 @@ header{
 It is included for accessibility to turn off animations
 and movement for people who have modified their 
 preferences to reduce motion.*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+   }
+
+  /*Turn off parallax*/
+  header{
+    background-attachment: initial;
+  }
+}
