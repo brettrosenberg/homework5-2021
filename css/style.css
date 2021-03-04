@@ -99,7 +99,7 @@ a:focus{
 /*Req 5*/
 .container{
   display: grid;
-  grid-template-rows: auto;
+  grid-template-rows: auto auto auto auto;
   grid-template-columns: 1fr 3fr 3fr 1fr;
   grid-row-gap: 20px
   /*Your Code Here*/
@@ -188,7 +188,7 @@ header{
     /*Your code here:*/
     display: grid;
     grid-template-rows: 400px 425px 425px 400px;
-    grid-template-columns: 50 px auto 500px auto 50px;
+    grid-template-columns: 50px auto 500px auto 50px;
   }
 
   /*Req 12*/
@@ -210,19 +210,3 @@ header{
 It is included for accessibility to turn off animations
 and movement for people who have modified their 
 preferences to reduce motion.*/
-
-@media screen and (prefers-reduced-motion: reduce){
-  html{
-      scroll-behavior: auto; /* Removes scroll animation */
-  }
-
-  .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
-   }
-
-  /*Turn off parallax*/
-  header{
-    background-attachment: initial;
-  }
-}
